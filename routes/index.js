@@ -2,11 +2,6 @@ var express = require('express');
 var router = express.Router();
 var Message=require('../models/message');
 
-// /* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
-
 //messages from user
 router.post('/message', function (req,res) {
     const message = new Message({
